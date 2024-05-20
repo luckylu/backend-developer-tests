@@ -1,7 +1,7 @@
-require './game.rb'
-require './random_player.rb'
-require './your_player.rb'
-require './helper.rb'
+require "./game.rb"
+require "./random_player.rb"
+require "./your_player.rb"
+require "./helper.rb"
 
 srand(129)
 
@@ -10,18 +10,18 @@ grid_size = 5
 your_strategy = -> {
   game = Game.new(grid_size: grid_size)
 
-  you = YourPlayer.new(game: game, name: 'Unknown candidate')
-
-  game.add_player(you)
-
+  player1 = YourPlayer.new(game: game, name: "player1")
+  # player2 = YourPlayer.new(game: game, name: "player2")
+  game.add_player(player1)
+  # game.add_player(player2)
   game.start
 }
 
 random_strategy = -> {
   game = Game.new(grid_size: grid_size)
 
-  random_player = RandomPlayer.new(game: game, name: 'Rando 1')
-  random_player2 = RandomPlayer.new(game: game, name: 'Rando 2')
+  random_player = RandomPlayer.new(game: game, name: "Rando 1")
+  random_player2 = RandomPlayer.new(game: game, name: "Rando 2")
 
   game.add_player(random_player)
   game.add_player(random_player2)

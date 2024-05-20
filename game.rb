@@ -1,4 +1,4 @@
-require './grid.rb'
+require "./grid.rb"
 
 class Game
   attr_accessor :grid, :total_cost
@@ -53,7 +53,7 @@ class Game
     {
       all_visited: grid.all_visited?,
       total_time: timer,
-      total_cost: @total_cost
+      total_cost: @total_cost,
     }
   end
 
